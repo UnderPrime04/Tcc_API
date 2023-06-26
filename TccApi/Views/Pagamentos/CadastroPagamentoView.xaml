@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TccApi.Views.Pagamentos.CadastroPagamentoView"
+             Title="CadastroPagamentoView">
+    <ScrollView>
+        <VerticalStackLayout Spacing="3" Padding="15">
+            <Label Text="Id Pagamento" FontSize="Medium" />
+            <Entry Text="{Binding Id_Pagamento}" IsEnabled="False" FontSize="Medium" />
+
+            <Label Text="Id Contrato" FontSize="Medium" />
+            <Entry Text="{Binding Id_Contrato}" FontSize="Medium" />
+
+            <Label Text="Metodo" FontSize="Medium" />
+            <Picker Title="---Selecione---"  ItemsSource="{Binding ListaTiposMetodo}" ItemDisplayBinding="{Binding Descricao}" SelectedItem="{Binding TipoMetodoSelecionado}" />
+
+            <Label Text="Valor" FontSize="Medium" />
+            <Entry Text="{Binding Valor}" FontSize="Medium" Keyboard="Numeric" />
+            
+            
+
+            <HorizontalStackLayout Spacing="20">
+                <Button Text="Salvar" Command="{Binding SalvarCommand}"></Button>
+                <Button Text="Cancel" Command="{Binding CancelarCommand}"></Button>
+            </HorizontalStackLayout>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
