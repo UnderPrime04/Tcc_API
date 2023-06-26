@@ -9,8 +9,6 @@
     </Shell.TitleView>
     <VerticalStackLayout Padding="10, 0, 0, 0" VerticalOptions="FillAndExpand">
         <ListView x:Name="listView" HasUnevenRows="True" ItemsSource="{Binding Pagamentos}" SelectedItem="{Binding PagamentoSelecionado}">
-            
-
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>

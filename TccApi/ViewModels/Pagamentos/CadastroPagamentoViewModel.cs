@@ -154,7 +154,7 @@ namespace TccApi.ViewModels.Pagamentos
         {
             try
             {
-                Pagamento p = await pService.GetPagamentoAsync(int.Parse(pagamentoSelecionadoId));
+                Pagamento p = await pService.GetPagamentosAsync(int.Parse(pagamentoSelecionadoId));
 
                 this.Id_Contrato = p.Id_Contrato;              
                 this.Valor = p.Valor;            

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TccApi.Models
 {
-    internal class TipoMetodo
+    public class TipoMetodo
     {
         public int Id { get; set; }
         public string Descricao { get; set; }

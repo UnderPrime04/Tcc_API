@@ -27,7 +27,7 @@ namespace TccApi.Services.Pagamentos
             _request.GetAsync<ObservableCollection<Models.Pagamento>>(apiUrlBase + urlComplementar, _token);
             return listaPagamentos;
         }
-        public async Task<Pagamento> GetPagamentoAsync(int pagamentoId)
+        public async Task<Pagamento> GetPagamentosAsync(int pagamentoId)
         {
             string urlComplementar = string.Format("/{0}", pagamentoId);
             var pagamento = await _request.GetAsync<Models.Pagamento>(apiUrlBase +
